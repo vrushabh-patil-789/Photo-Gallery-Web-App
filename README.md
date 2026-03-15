@@ -1,12 +1,23 @@
-# React + Vite
+A modern, performance-optimized image gallery built with React.js and Tailwind CSS. This application integrates with the Picsum Photos API to provide a seamless browsing experience with local persistence.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Key Features
+Custom Data Fetching: Implements a robust custom hook (useFetchPhotos) to handle asynchronous API calls and state management.
 
-Currently, two official plugins are available:
+Persistent Favorites: Uses useReducer and useEffect to manage a "Favorites" list that persists across browser sessions via localStorage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Optimized Search: Features a real-time search bar that filters images by author, utilizing useMemo to prevent unnecessary re-computations.
 
-## Expanding the ESLint configuration
+State Management: Employs useReducer for complex state logic (adding/removing favorites) and useCallback for stable event handlers.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Design: A fully responsive grid layout (1 column on mobile, up to 4 on desktop) built using Tailwind CSS.
+
+UX Focused: Includes a custom animated spinner for loading states and graceful error handling.
+
+🛠️ Tech Stack
+Framework: React (Vite/CRA)
+
+Styling: Tailwind CSS
+
+Hooks Used: useReducer, useMemo, useCallback, useState, useEffect.
+
+API: https://picsum.photos/v2/list?limit=30
