@@ -85,7 +85,7 @@ const toggleFav = (images) => {
             <nav>
                 <input
                 type="search"
-                placeholder="search here"
+                placeholder="   Search Here"
                 value={search}
                 onChange={searchResult}
                 className="h-10 w-[700px] rounded-2xl border-b-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
