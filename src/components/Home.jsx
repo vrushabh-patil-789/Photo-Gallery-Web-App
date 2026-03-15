@@ -81,7 +81,7 @@ const toggleFav = (images) => {
         <div className="my-5 flex items-center">
             <h1
             className="text-2xl ml-2 mr-40"
-            >PhotoGalaryApp</h1>
+            >PhotoGalleryApp</h1>
             <nav>
                 <input
                 type="search"
