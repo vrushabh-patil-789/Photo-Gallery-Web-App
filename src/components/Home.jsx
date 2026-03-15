@@ -78,17 +78,19 @@ const toggleFav = (images) => {
     return (
         <>
 
-        <div className="my-5 flex items-center">
+        <div className="my-5 flex flex-wrap items-center gap-3 px-4">
             <h1
             className="text-2xl ml-2 mr-40"
             >PhotoGalleryApp</h1>
-            <nav>
+            <nav
+            className="flex-1 min-w-[200px]"
+            >
                 <input
                 type="search"
                 placeholder="   Search Here"
                 value={search}
                 onChange={searchResult}
-                className="h-10 w-[700px] rounded-2xl border-b-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                className="h-10 w-full rounded-2xl border-b-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 >
                 </input>
             </nav>
@@ -102,12 +104,13 @@ const toggleFav = (images) => {
 
                         <img
                         src={data.download_url}
+                        className="w-full h-48 object-cover"
                         
                         >
                         </img>
 
-                        <div className="flex">
-                            <h1>Author: {data.author}</h1>
+                        <div className="flex items-center mt-1">
+                            <h1 className="flex-1">Author: {data.author}</h1>
                             <img
                             src={
                                 favourites.some((fav) => fav.id === data.id) ? "/heart-solid-full.svg" : "/heart-regular-full.svg"
